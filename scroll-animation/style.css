@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  /* dont let borders effect size of an element */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efddd6;
+  font-family: 'Roboto', sans-serif;
+  /* center everything */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align top to bottom */
+  justify-content: center;
+  margin: 0;
+  /* hide horz scrollbar */
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  /* offsetXl, offsetY, blur, color */
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  /* 0 is default */
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+
+/* select every other one */
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
